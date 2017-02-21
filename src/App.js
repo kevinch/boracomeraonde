@@ -3,7 +3,7 @@ import './App.css';
 import { AddForm } from './components/places/addForm'
 import { PlacesList } from './components/places/list'
 import { addPlace, generateId, findById, updatePlace, removePlace } from './lib/placesHelpers'
-import {loadPlaces} from './lib/places.service'
+import { loadPlaces, createPlace } from './lib/places.service'
 
 class App extends Component {
   state = {
@@ -29,8 +29,17 @@ class App extends Component {
       currentPlace: '',
       errorMessage: ''
     })
+    createPlace(newPlace)
+      .then(() => this.showTempMEssage('place added'))
   }
 
+  // Handles messages to user
+  showTempMEssage = (msg) => {
+    this.setState({message: msg})
+    setTimeout(() => this.setState({message: ''}), 2500)
+  }
+
+  // Handles the remove action
   handleRemove = (id, e) => {
     e.preventDefault()
     const updatedPlaces = removePlace(this.state.places, id)
@@ -62,6 +71,7 @@ class App extends Component {
         </div>
         <div className="add-place">
           {this.state.errorMessage && <span className="error">{this.state.errorMessage}</span>}
+          {this.state.message && <span className="success">{this.state.message}</span>}
           <AddForm
             handleInputChange={this.handleInputChange}
             handleSubmit={submitHandler}
