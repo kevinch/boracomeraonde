@@ -1,0 +1,19 @@
+{
+  "places": [
+    {
+      "id": 1,
+      "name": "Pizza Storm",
+      "location": "Rua Maria Quiteria, 50"
+    },
+    {
+      "id": 2,
+      "name": "Kebab",
+      "location": "Rua Sa Frereia, 150"
+    },
+    {
+      "id": 3,
+      "name": "Pianense",
+      "location": "Rua Marques, 129"
+    }
+  ]
+}

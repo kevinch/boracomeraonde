@@ -3,27 +3,16 @@ import './App.css';
 import { AddForm } from './components/places/addForm'
 import { PlacesList } from './components/places/list'
 import { addPlace, generateId, findById, updatePlace, removePlace } from './lib/placesHelpers'
+import {loadPlaces} from './lib/places.service'
 
 class App extends Component {
   state = {
-    places: [
-      {
-        id: 1,
-        name: 'Pizza Storm',
-        location: 'Rua Maria Quiteria, 50'
-      },
-      {
-        id: 2,
-        name: 'Kebab',
-        location: 'Rua Sa Frereia, 150'
-      },
-      {
-        id: 3,
-        name: 'Pianense',
-        location: 'Rua Marques, 129'
-      }
-    ],
+    places: [],
     currentPlace: ''
+  }
+
+  componentDidMount () {
+    loadPlaces().then(places => this.setState({places}))
   }
 
   // Handles new place form submit
