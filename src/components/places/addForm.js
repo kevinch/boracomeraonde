@@ -1,7 +1,7 @@
 import React from 'react'
 
 export const AddForm = (props) => (
-  <from>
+  <form onSubmit={props.handleSubmit}>
     <h1 className="places-list-title">Add new:</h1>
 
     <label htmlFor="add-place-input">Name:</label>
@@ -10,10 +10,11 @@ export const AddForm = (props) => (
       value={props.currentPlace}
       id="add-place-input"
       type="text" />
-  </from>
+  </form>
 )
 
 AddForm.propTypes = {
   currentPlace: React.PropTypes.string.isRequired,
-  handleInputChange: React.PropTypes.func.isRequired
+  handleInputChange: React.PropTypes.func.isRequired,
+  handleSubmit: React.PropTypes.func.isRequired
 }

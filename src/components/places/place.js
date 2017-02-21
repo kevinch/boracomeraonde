@@ -11,6 +11,6 @@ export const Place = (props) => {
 
 Place.propTypes = {
   name: React.PropTypes.string.isRequired,
-  location: React.PropTypes.string.isRequired,
+  location: React.PropTypes.string,
   id: React.PropTypes.number.isRequired
 }
