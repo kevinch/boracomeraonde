@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import { AddForm } from './components/places/add-form'
 
 class App extends Component {
   constructor () {
@@ -22,8 +23,16 @@ class App extends Component {
           name: 'Pianense',
           location: 'Rua Marques, 129'
         }
-      ]
+      ],
+      currentPlace: ''
     }
+    this.handleInputChange = this.handleInputChange.bind(this)
+  }
+
+  handleInputChange (e) {
+    this.setState({
+      currentPlace: e.target.value
+    })
   }
 
   render() {
@@ -33,10 +42,12 @@ class App extends Component {
           <h2>bora comer aonde?</h2>
         </div>
         <div className="add-place">
-          <label htmlFor="add-place-input">Add new</label>
-          <input id="add-place-input" type="text"/>
+          <AddForm
+            handleInputChange={this.handleInputChange}
+            currentPlace={this.currentPlace} />
         </div>
         <div className="places-list">
+          <h1 className="places-list-title">Places:</h1>
           <ul>
             {this.state.places.map(place =>
               <li key={place.id}>
