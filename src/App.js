@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import { AddForm } from './components/places/add-form'
+import { PlacesList } from './components/places/list'
 
 class App extends Component {
   constructor () {
@@ -46,17 +47,7 @@ class App extends Component {
             handleInputChange={this.handleInputChange}
             currentPlace={this.currentPlace} />
         </div>
-        <div className="places-list">
-          <h1 className="places-list-title">Places:</h1>
-          <ul>
-            {this.state.places.map(place =>
-              <li key={place.id}>
-                <p className="place-name">{place.name}</p>
-                <p className="place-location">{place.location}</p>
-              </li>
-            )}
-          </ul>
-        </div>
+        <PlacesList places={this.state.places} />
       </div>
     );
   }
