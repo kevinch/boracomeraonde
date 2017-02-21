@@ -45,7 +45,7 @@ class App extends Component {
         <div className="add-place">
           <AddForm
             handleInputChange={this.handleInputChange}
-            currentPlace={this.currentPlace} />
+            currentPlace={this.state.currentPlace} />
         </div>
         <PlacesList places={this.state.places} />
       </div>

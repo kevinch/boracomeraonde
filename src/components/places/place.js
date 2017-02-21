@@ -8,3 +8,9 @@ export const Place = (props) => {
     </li>
   )
 }
+
+Place.propTypes = {
+  name: React.PropTypes.string.isRequired,
+  location: React.PropTypes.string.isRequired,
+  id: React.PropTypes.number.isRequired
+}
