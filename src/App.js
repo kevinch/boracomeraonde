@@ -3,7 +3,7 @@ import './App.css';
 import { AddForm } from './components/places/addForm'
 import { PlacesList } from './components/places/list'
 import { addPlace, generateId, findById, updatePlace, removePlace } from './lib/placesHelpers'
-import { loadPlaces, createPlace } from './lib/places.service'
+import { loadPlaces, createPlace, deletePlace } from './lib/places.service'
 
 class App extends Component {
   state = {
@@ -44,6 +44,8 @@ class App extends Component {
     e.preventDefault()
     const updatedPlaces = removePlace(this.state.places, id)
     this.setState({places: updatedPlaces})
+    deletePlace(id)
+      .then(() => this.showTempMEssage('place removed'))
   }
 
   // Handles empty name form
