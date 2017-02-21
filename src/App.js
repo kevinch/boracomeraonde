@@ -5,36 +5,29 @@ import { PlacesList } from './components/places/list'
 import { addPlace, generateId } from './lib/placesHelpers'
 
 class App extends Component {
-  constructor () {
-    super()
-
-    this.state = {
-      places: [
-        {
-          id: 1,
-          name: 'Pizza Storm',
-          location: 'Rua Maria Quiteria, 50'
-        },
-        {
-          id: 2,
-          name: 'Kebab',
-          location: 'Rua Sa Frereia, 150'
-        },
-        {
-          id: 3,
-          name: 'Pianense',
-          location: 'Rua Marques, 129'
-        }
-      ],
-      currentPlace: ''
-    }
-    this.handleInputChange = this.handleInputChange.bind(this)
-    this.handleSubmit = this.handleSubmit.bind(this)
-    this.handleEmptySubmit = this.handleEmptySubmit.bind(this)
+  state = {
+    places: [
+      {
+        id: 1,
+        name: 'Pizza Storm',
+        location: 'Rua Maria Quiteria, 50'
+      },
+      {
+        id: 2,
+        name: 'Kebab',
+        location: 'Rua Sa Frereia, 150'
+      },
+      {
+        id: 3,
+        name: 'Pianense',
+        location: 'Rua Marques, 129'
+      }
+    ],
+    currentPlace: ''
   }
 
   // Handles new place form submit
-  handleSubmit (e) {
+  handleSubmit = (e) => {
     e.preventDefault()
     const newId = generateId()
     const newPlace = {
@@ -50,7 +43,7 @@ class App extends Component {
   }
 
   // Handles empty name form
-  handleEmptySubmit (e) {
+  handleEmptySubmit = (e) => {
     e.preventDefault()
     this.setState({
       errorMessage: 'Empty name'
@@ -58,7 +51,7 @@ class App extends Component {
   }
 
   // Handles new place input (name for now)
-  handleInputChange (e) {
+  handleInputChange = (e) => {
     this.setState({
       currentPlace: e.target.value
     })
