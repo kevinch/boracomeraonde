@@ -6,7 +6,7 @@ export const PlacesList = (props) => (
     <h1 className="places-list-title">Places:</h1>
 
     <ul>
-      {props.places.map( place => <Place key={place.id} {...place} /> )}
+      {props.places.map( place => <Place handleRemove={props.handleRemove} key={place.id} {...place} /> )}
     </ul>
   </div>
 )

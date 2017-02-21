@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import { AddForm } from './components/places/addForm'
 import { PlacesList } from './components/places/list'
-import { addPlace, generateId } from './lib/placesHelpers'
+import { addPlace, generateId, findById, updatePlace, removePlace } from './lib/placesHelpers'
 
 class App extends Component {
   state = {
@@ -42,6 +42,12 @@ class App extends Component {
     })
   }
 
+  handleRemove = (id, e) => {
+    e.preventDefault()
+    const updatedPlaces = removePlace(this.state.places, id)
+    this.setState({places: updatedPlaces})
+  }
+
   // Handles empty name form
   handleEmptySubmit = (e) => {
     e.preventDefault()
@@ -72,7 +78,9 @@ class App extends Component {
             handleSubmit={submitHandler}
             currentPlace={this.state.currentPlace} />
         </div>
-        <PlacesList places={this.state.places} />
+        <PlacesList
+          places={this.state.places}
+          handleRemove={this.handleRemove} />
       </div>
     );
   }
