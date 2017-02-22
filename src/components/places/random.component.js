@@ -2,16 +2,35 @@ import React, { Component } from 'react'
 import { loadPlaces } from '../../lib/places.service'
 
 class RandomPlace extends Component {
+  constructor () {
+    super()
+
+    this.reload = this.reload.bind(this)
+  }
+
   state = {
+    places: [],
     random: {}
+  }
+
+  // Get a random place form the list
+  getRandomPlace () {
+    let randomNum = Math.floor(Math.random() * this.state.places.length)
+    this.setState({random: this.state.places[randomNum]})
   }
 
   // Load data when component is ready
   componentDidMount () {
     loadPlaces().then((places) => {
-      let randomNum = Math.floor(Math.random() * places.length)
-      this.setState({random: places[randomNum]})
+      this.setState({places: places})
+      this.getRandomPlace()
     })
+  }
+
+  // Reload action
+  reload (e) {
+    e.preventDefault()
+    this.getRandomPlace()
   }
 
   render() {
@@ -39,6 +58,8 @@ class RandomPlace extends Component {
         {typeData}
         <p>Price: {this.state.random.price}</p>
         <p>Location: {this.state.random.location}</p>
+
+        <a href="#" onClick={this.reload}>reload</a>
       </div>
     )
   }
