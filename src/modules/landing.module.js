@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import Header from '../components/global/header.component'
+import RandomPlace from '../components/places/random.component'
 import '../App.css'
 
 class Landing extends Component {
@@ -25,10 +26,7 @@ class Landing extends Component {
     return (
       <div className="App">
         <Header />
-
-        {/*
-          <RandomPlace />
-        */}
+        <RandomPlace />
       </div>
     )
   }
