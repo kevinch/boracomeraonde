@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { PlacesList } from '../components/places/list.component'
+import Header from '../components/global/header.component'
 import { loadPlaces, deletePlace } from '../lib/places.service'
 import { removePlace } from '../lib/places.helpers'
 
@@ -39,6 +40,8 @@ class Places extends Component {
   render() {
     return (
       <div className="places-module">
+        <Header />
+
         <h1 className="page-title">All places:</h1>
 
         {this.state.message && <span className="success">{this.state.message}</span>}

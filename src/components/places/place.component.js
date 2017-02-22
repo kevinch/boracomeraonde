@@ -9,14 +9,17 @@ export const Place = (props) => {
   if (props.description) {
     descriptionData = <p className="place-description">Description: {props.description}</p>
   }
+
   if (props.website) {
     let url = props.website
     url = (!url.includes('http://')) ? 'http://' + url : ''
     websiteData = <p className="place-website">Website: <a target="_blank" href={url} >{props.website}</a></p>
   }
+
   if (props.type) {
     typeData = <p className="place-type">Type: {props.type}</p>
   }
+
   priceClasses = 'place-price ' + props.price
 
   return (

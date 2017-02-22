@@ -1,5 +1,6 @@
-import React, { Component } from 'react';
-import '../App.css';
+import React, { Component } from 'react'
+import Header from '../components/global/header.component'
+import '../App.css'
 
 class Landing extends Component {
   state = {
@@ -23,15 +24,13 @@ class Landing extends Component {
   render() {
     return (
       <div className="App">
-        <div className="App-header">
-          <h2>bora comer aonde?</h2>
-        </div>
+        <Header />
 
         {/*
           <RandomPlace />
         */}
       </div>
-    );
+    )
   }
 }
 

@@ -8,3 +8,8 @@
 .error {
   color: red;
 }
+
+.nav-component .nav-link {
+  margin: 0 10px;
+  color: pink;
+}

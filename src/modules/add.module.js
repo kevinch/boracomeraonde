@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { AddForm } from '../components/places/form.component'
+import Header from '../components/global/header.component'
 import { addPlace, generateId } from '../lib/places.helpers'
 import { createPlace } from '../lib/places.service'
 
@@ -74,6 +75,8 @@ class Add extends Component {
 
     return (
       <div className="add-module">
+        <Header />
+
         <h1 className="page-title">Add new spot:</h1>
 
         <div className="add-place">
