@@ -16,6 +16,12 @@ export const AddForm = (props) => (
       id="add-place-location"
       name="location"
       type="text" />
+    <label htmlFor="add-place-description">Description:</label>
+    <input
+      value={props.currentPlace.description}
+      id="add-place-description"
+      name="description"
+      type="text" />
 
     <button type="submit">Send</button>
   </form>

@@ -36,21 +36,21 @@ class App extends Component {
 
   // Handles new place form submit
   handleSubmit = (e) => {
-    console.log('handleSubmit()')
     e.preventDefault()
     const newId = generateId()
     const newPlace = {
       name: this.state.currentPlace.name,
       location: this.state.currentPlace.location,
+      description: this.state.currentPlace.description,
       id: newId
     }
-    console.log(newPlace)
     const updatedPlaces = addPlace(this.state.places, newPlace)
     this.setState({
       places: updatedPlaces,
       currentPlace: {
         name: '',
-        location: ''
+        location: '',
+        description: ''
       },
       errorMessage: ''
     })
@@ -74,7 +74,7 @@ class App extends Component {
   }
 
   render() {
-    const submitHandler = this.state.currentPlace.name ? this.handleSubmit : this.handleEmptySubmit
+    const submitHandler = (this.state.currentPlace.name && this.state.currentPlace.location) ? this.handleSubmit : this.handleEmptySubmit
 
     return (
       <div className="App">

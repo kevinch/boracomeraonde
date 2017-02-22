@@ -4,6 +4,12 @@
       "name": "O Plebeu ",
       "location": "R. Cap. Salomão, 50 - Humaitá, Rio de Janeiro - RJ, 22271-040",
       "id": 30828
+    },
+    {
+      "name": "Boteco Taco",
+      "location": "Rua Humaitá, 122 - Humaitá, Rio de Janeiro - RJ, 22261-002",
+      "description": "Cool place for snooker",
+      "id": 90148
     }
   ]
 }
