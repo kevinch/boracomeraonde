@@ -2,35 +2,21 @@ import React, { Component } from 'react';
 import './App.css';
 import { AddForm } from './components/places/addForm'
 import { PlacesList } from './components/places/list'
-import { addPlace, generateId, findById, updatePlace, removePlace } from './lib/placesHelpers'
+import { addPlace, generateId, removePlace } from './lib/placesHelpers'
 import { loadPlaces, createPlace, deletePlace } from './lib/places.service'
 
 class App extends Component {
   state = {
     places: [],
-    currentPlace: ''
+    currentPlace: {
+      name: '',
+      location: ''
+    }
   }
 
+  // Load data when component is ready
   componentDidMount () {
     loadPlaces().then(places => this.setState({places}))
-  }
-
-  // Handles new place form submit
-  handleSubmit = (e) => {
-    e.preventDefault()
-    const newId = generateId()
-    const newPlace = {
-      name: this.state.currentPlace,
-      id: newId
-    }
-    const updatedPlaces = addPlace(this.state.places, newPlace)
-    this.setState({
-      places: updatedPlaces,
-      currentPlace: '',
-      errorMessage: ''
-    })
-    createPlace(newPlace)
-      .then(() => this.showTempMEssage('place added'))
   }
 
   // Handles messages to user
@@ -48,6 +34,30 @@ class App extends Component {
       .then(() => this.showTempMEssage('place removed'))
   }
 
+  // Handles new place form submit
+  handleSubmit = (e) => {
+    console.log('handleSubmit()')
+    e.preventDefault()
+    const newId = generateId()
+    const newPlace = {
+      name: this.state.currentPlace.name,
+      location: this.state.currentPlace.location,
+      id: newId
+    }
+    console.log(newPlace)
+    const updatedPlaces = addPlace(this.state.places, newPlace)
+    this.setState({
+      places: updatedPlaces,
+      currentPlace: {
+        name: '',
+        location: ''
+      },
+      errorMessage: ''
+    })
+    createPlace(newPlace)
+      .then(() => this.showTempMEssage('place added'))
+  }
+
   // Handles empty name form
   handleEmptySubmit = (e) => {
     e.preventDefault()
@@ -56,15 +66,15 @@ class App extends Component {
     })
   }
 
-  // Handles new place input (name for now)
-  handleInputChange = (e) => {
-    this.setState({
-      currentPlace: e.target.value
-    })
+  // Handles new place inputs change
+  handleFormChange = (e) => {
+    const actualContent = this.state.currentPlace
+    actualContent[e.target.name] = e.target.value
+    this.setState(actualContent)
   }
 
   render() {
-    const submitHandler = this.state.currentPlace ? this.handleSubmit : this.handleEmptySubmit
+    const submitHandler = this.state.currentPlace.name ? this.handleSubmit : this.handleEmptySubmit
 
     return (
       <div className="App">
@@ -74,11 +84,13 @@ class App extends Component {
         <div className="add-place">
           {this.state.errorMessage && <span className="error">{this.state.errorMessage}</span>}
           {this.state.message && <span className="success">{this.state.message}</span>}
+
           <AddForm
-            handleInputChange={this.handleInputChange}
+            handleFormChange={this.handleFormChange}
             handleSubmit={submitHandler}
             currentPlace={this.state.currentPlace} />
         </div>
+
         <PlacesList
           places={this.state.places}
           handleRemove={this.handleRemove} />

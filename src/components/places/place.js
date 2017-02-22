@@ -6,9 +6,9 @@ export const Place = (props) => {
   const handleRemove = partial(props.handleRemove, props.id)
   return (
     <li>
-      <a href="#" onClick={handleRemove}>X</a>
-      <p className="place-name">{props.name}</p>
-      <p className="place-location">{props.location}</p>
+      <p className="place-name">Name: {props.name}</p>
+      <p className="place-location">Location: {props.location}</p>
+      <p><a href="#" onClick={handleRemove}>Remove</a></p>
     </li>
   )
 }
