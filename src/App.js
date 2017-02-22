@@ -13,7 +13,8 @@ class App extends Component {
       description: '',
       location: '',
       website: '',
-      price: ''
+      price: 'ok',
+      type: ''
     }
   }
 
@@ -28,7 +29,7 @@ class App extends Component {
     setTimeout(() => this.setState({message: ''}), 2500)
   }
 
-  // Handles the remove action
+  // Handles the remove place action
   handleRemove = (id, e) => {
     e.preventDefault()
     const updatedPlaces = removePlace(this.state.places, id)
@@ -47,6 +48,7 @@ class App extends Component {
       description: this.state.currentPlace.description,
       website: this.state.currentPlace.website,
       price: this.state.currentPlace.price,
+      type: this.state.currentPlace.type,
       id: newId
     }
     const updatedPlaces = addPlace(this.state.places, newPlace)
@@ -54,36 +56,36 @@ class App extends Component {
       places: updatedPlaces,
       currentPlace: {
         name: '',
-        location: '',
         description: '',
+        location: '',
         website: '',
-        price: '',
-        id: ''
+        price: 'ok',
+        type: ''
       },
       errorMessage: ''
     })
+
     createPlace(newPlace)
       .then(() => this.showTempMEssage('place added'))
   }
 
-  // Handles empty name form
+  // Handles missing arguments form submit
   handleEmptySubmit = (e) => {
     e.preventDefault()
     this.setState({
-      errorMessage: 'Empty name'
+      errorMessage: 'Name & location are mandatory.'
     })
   }
 
-  // Handles new place inputs change
+  // Handles new place form inputs change
   handleFormChange = (e) => {
     const actualContent = this.state.currentPlace
     actualContent[e.target.name] = e.target.value
-    console.log(actualContent)
     this.setState({currentPlace: actualContent})
   }
 
   render() {
-    const submitHandler = (this.state.currentPlace.name && this.state.currentPlace.location) ? this.handleSubmit : this.handleEmptySubmit
+    const submitHandler = (this.state.currentPlace.name) ? this.handleSubmit : this.handleEmptySubmit
 
     return (
       <div className="App">

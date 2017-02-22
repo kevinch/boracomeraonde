@@ -1,11 +1,6 @@
 {
   "places": [
     {
-      "name": "O Plebeu ",
-      "location": "R. Cap. Salomão, 50 - Humaitá, Rio de Janeiro - RJ, 22271-040",
-      "id": 30828
-    },
-    {
       "name": "Boteco Taco",
       "location": "Rua Humaitá, 122 - Humaitá, Rio de Janeiro - RJ, 22261-002",
       "description": "Cool place for snooker",
@@ -24,6 +19,33 @@
       "website": "restauranteouioui.com.br",
       "price": "bitmore",
       "id": 19494
+    },
+    {
+      "name": "Entretapas Botafogo",
+      "location": "Rua Conde de Irajá, 115 - Botafogo, Rio de Janeiro - RJ, 22271-020",
+      "description": "Slap that!",
+      "website": "entretapas.com.br",
+      "price": "bitmore",
+      "type": "Olé!",
+      "id": 57576
+    },
+    {
+      "name": "Restaurante Caravela do Visconde",
+      "location": "R. Visc. de Caravelas, 136 - Botafogo, Rio de Janeiro - RJ, 22271-022",
+      "description": "yay bacalhau!",
+      "website": "",
+      "price": "bitmore",
+      "type": "Portugêsh",
+      "id": 42633
+    },
+    {
+      "name": "Tragga - Parilla Argentina",
+      "location": "R. Cap. Salomão, 74 - Humaitá, Rio de Janeiro - RJ, 22271-040",
+      "description": "",
+      "website": "tragga.com.br",
+      "price": "bit more",
+      "type": "Argentina",
+      "id": 17203
     }
   ]
 }
