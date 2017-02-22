@@ -2,8 +2,6 @@ import React from 'react'
 
 export const AddForm = (props) => (
   <form onSubmit={props.handleSubmit}>
-    <h1 className="places-list-title">Add new:</h1>
-
     <div className="form-group">
       <label htmlFor="add-place-name">Name:</label>
       <input

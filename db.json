@@ -1,26 +1,6 @@
 {
   "places": [
     {
-      "name": "Boteco Taco",
-      "location": "Rua Humaitá, 122 - Humaitá, Rio de Janeiro - RJ, 22261-002",
-      "description": "Cool place for snooker",
-      "id": 90148
-    },
-    {
-      "name": "Joaquina Bar & Restaurante",
-      "location": "R. Voluntários da Pátria, 448 - Humaitá, Rio de Janeiro - RJ, 22270-018",
-      "website": "joaquinabar.com.br",
-      "id": 57786
-    },
-    {
-      "name": "Oui Oui",
-      "location": "Rua Conde de Irajá, 85 - Botafogo, Rio de Janeiro - RJ, 22271-020",
-      "description": "Sim sim!",
-      "website": "restauranteouioui.com.br",
-      "price": "bitmore",
-      "id": 19494
-    },
-    {
       "name": "Entretapas Botafogo",
       "location": "Rua Conde de Irajá, 115 - Botafogo, Rio de Janeiro - RJ, 22271-020",
       "description": "Slap that!",
@@ -46,6 +26,15 @@
       "price": "bit more",
       "type": "Argentina",
       "id": 17203
+    },
+    {
+      "name": "Restaurante Caravela do Visconde",
+      "location": "R. Visc. de Caravelas, 136 - Botafogo, Rio de Janeiro - RJ, 22271-022",
+      "description": "Old style is good style",
+      "website": "https://www.google.com.br/url?sa=t&rct=j&url=https%3A%2F%2Fwww.facebook.com%2Fcaraveladovisconde%2F%3Fref%3Daymt_homepage_panel&source=maps&cd=1&usg=AFQjCNGEG-bSpQuPvOKoT1pS35Oz3zZEZQ&sig2=OaMcga2M5XYI54wttRXA4A&ved=1t%3A3443%2Cp%3AH8WtWOvxCYSlwgT676LwBw",
+      "price": "ok",
+      "type": "Classic brazuca",
+      "id": 17559
     }
   ]
 }
