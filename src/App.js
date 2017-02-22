@@ -10,7 +10,10 @@ class App extends Component {
     places: [],
     currentPlace: {
       name: '',
-      location: ''
+      description: '',
+      location: '',
+      website: '',
+      price: ''
     }
   }
 
@@ -42,6 +45,8 @@ class App extends Component {
       name: this.state.currentPlace.name,
       location: this.state.currentPlace.location,
       description: this.state.currentPlace.description,
+      website: this.state.currentPlace.website,
+      price: this.state.currentPlace.price,
       id: newId
     }
     const updatedPlaces = addPlace(this.state.places, newPlace)
@@ -50,7 +55,10 @@ class App extends Component {
       currentPlace: {
         name: '',
         location: '',
-        description: ''
+        description: '',
+        website: '',
+        price: '',
+        id: ''
       },
       errorMessage: ''
     })
@@ -70,7 +78,8 @@ class App extends Component {
   handleFormChange = (e) => {
     const actualContent = this.state.currentPlace
     actualContent[e.target.name] = e.target.value
-    this.setState(actualContent)
+    console.log(actualContent)
+    this.setState({currentPlace: actualContent})
   }
 
   render() {

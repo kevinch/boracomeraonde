@@ -10,6 +10,20 @@
       "location": "Rua Humaitá, 122 - Humaitá, Rio de Janeiro - RJ, 22261-002",
       "description": "Cool place for snooker",
       "id": 90148
+    },
+    {
+      "name": "Joaquina Bar & Restaurante",
+      "location": "R. Voluntários da Pátria, 448 - Humaitá, Rio de Janeiro - RJ, 22270-018",
+      "website": "joaquinabar.com.br",
+      "id": 57786
+    },
+    {
+      "name": "Oui Oui",
+      "location": "Rua Conde de Irajá, 85 - Botafogo, Rio de Janeiro - RJ, 22271-020",
+      "description": "Sim sim!",
+      "website": "restauranteouioui.com.br",
+      "price": "bitmore",
+      "id": 19494
     }
   ]
 }
