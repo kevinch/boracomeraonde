@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 
 const INITIAL_LOCATION = {
   address: 'Rio de Janeiro, Brasil',
@@ -9,12 +9,12 @@ const INITIAL_LOCATION = {
 }
 const INITIAL_MAP_ZOOM_LEVEL = 15
 
-class Gmap extends Component {
-  constructor (props) {
-    super(props)
+class Gmap extends React.Component {
+  constructor () {
+    super()
 
     this.state = {
-      address: ''
+      address: 'initial value in child'
     }
     this.setMapElementReference = this.setMapElementReference.bind(this)
   }
@@ -22,10 +22,12 @@ class Gmap extends Component {
   componentDidMount () {
     console.log('gmap componentDidMount')
     this.setState({address: this.props.address})
-    // this.setState((prevState, props) => {
-    //   return {address: props.address};
-    // });
-    this.loadMap()
+    let x = this.props.address
+    let y = this.state.address
+
+    console.log(x)
+    console.log(y)
+    // this.loadMap()
   }
 
   geocodeAddress (address) {

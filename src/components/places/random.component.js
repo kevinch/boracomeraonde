@@ -1,8 +1,8 @@
-import React, { Component } from 'react'
+import React from 'react'
 import { loadPlaces } from '../../lib/places.service'
 import Gmap from '../global/gmap.component'
 
-class RandomPlace extends Component {
+class RandomPlace extends React.Component {
   constructor () {
     super()
 
