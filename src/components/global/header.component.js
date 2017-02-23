@@ -4,8 +4,8 @@ import Nav from './nav.component'
 const Header = React.createClass({
   render () {
     return (
-      <div className="App-header">
-        <h1>bora comer aonde?</h1>
+      <div className="header-component">
+        <h1 className="header-title">bora comida?</h1>
         <Nav />
       </div>
     )
