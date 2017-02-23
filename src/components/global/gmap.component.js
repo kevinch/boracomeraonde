@@ -14,24 +14,23 @@ class Gmap extends Component {
     super(props)
 
     this.state = {
-      address: this.props.address,
-      test: 'test'
+      address: ''
     }
-    // this.reload = this.reload.bind(this)
     this.setMapElementReference = this.setMapElementReference.bind(this)
   }
 
-
-
-  state: {
-    address: 'xx'
+  componentDidMount () {
+    console.log('gmap componentDidMount')
+    this.setState({address: this.props.address})
+    this.loadMap()
   }
 
   geocodeAddress (address) {
-    console.log('in geocodeAddress')
+    console.log('in geocodeAddress, address: ', address)
     this.geocoder = new window.google.maps.Geocoder()
     this.geocoder.geocode({ 'address': address }, function handleResults(results, status) {
-      console.log(status)
+
+      console.log('status: ',status)
       if (status === window.google.maps.GeocoderStatus.OK) {
         this.map.setCenter(results[0].geometry.location);
         this.marker.setPosition(results[0].geometry.location);
@@ -41,45 +40,22 @@ class Gmap extends Component {
   }
 
   loadMap () {
-    console.log('in loadMap')
-    // console.log(this.props.address)
-    // console.log(this.state.address)
-    // let address
-    // Gmap related
-    // Bug: here this.state.random was still the old one, dont know why
-    // address = this.state.places[randomNum].location
+    this.geocodeAddress(this.props.address)
 
-    // address = this.props.address
-    // console.log(this.state.address)
-    // this.geocodeAddress(this.state.address)
-
-    // this.map = new window.google.maps.Map(this.mapElement, {
-    //   zoom: INITIAL_MAP_ZOOM_LEVEL,
-    //   center: {
-    //     lat: INITIAL_LOCATION.position.latitude,
-    //     lng: INITIAL_LOCATION.position.longitude
-    //   }
-    // })
-    // this.marker = new window.google.maps.Marker({
-    //   map: this.map,
-    //   position: {
-    //     lat: INITIAL_LOCATION.position.latitude,
-    //     lng: INITIAL_LOCATION.position.longitude
-    //   }
-    // })
-  }
-
-  componentDidMount () {
-    console.log('gmap didmount')
-    // this.setState({address: this.props.address})
-    let x = this.props.address
-    let y = this.state.address
-    let z = this.state.test
-
-    console.log(x)
-    console.log(y)
-    console.log(z)
-    // this.loadMap()
+    this.map = new window.google.maps.Map(this.mapElement, {
+      zoom: INITIAL_MAP_ZOOM_LEVEL,
+      center: {
+        lat: INITIAL_LOCATION.position.latitude,
+        lng: INITIAL_LOCATION.position.longitude
+      }
+    })
+    this.marker = new window.google.maps.Marker({
+      map: this.map,
+      position: {
+        lat: INITIAL_LOCATION.position.latitude,
+        lng: INITIAL_LOCATION.position.longitude
+      }
+    })
   }
 
   setMapElementReference (mapElementReference) {
@@ -95,9 +71,5 @@ class Gmap extends Component {
     )
   }
 }
-
-// Gmap.propTypes = {
-//   address: React.PropTypes.string
-// }
 
 export default Gmap
