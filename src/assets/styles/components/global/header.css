@@ -1,5 +1,6 @@
 .header {
   position: relative;
+  padding: 4% 0 0 4%;
   z-index: 1; }
 
 .header:before {
@@ -14,4 +15,4 @@
   left: -100%; }
 
 .header-title {
-  margin: 0; }
+  margin: 0 0 0 4%; }

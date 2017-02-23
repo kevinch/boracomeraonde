@@ -9,6 +9,8 @@ import './assets/styles/vendor/normalize.min.css'
 import './assets/styles/app.css'
 import './assets/styles/modules/landing.css'
 import './assets/styles/components/global/header.css'
+import './assets/styles/components/global/nav.css'
+import './assets/styles/components/global/logo.css'
 import './assets/styles/components/places/random.css'
 
 ReactDOM.render((
