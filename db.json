@@ -1,40 +1,31 @@
 {
   "places": [
     {
-      "name": "Entretapas Botafogo",
-      "location": "Rua Conde de Irajá, 115 - Botafogo, Rio de Janeiro - RJ, 22271-020",
-      "description": "Slap that!",
-      "website": "entretapas.com.br",
-      "price": "bitmore",
-      "type": "Olé!",
-      "id": 57576
-    },
-    {
-      "name": "Restaurante Caravela do Visconde",
-      "location": "R. Visc. de Caravelas, 136 - Botafogo, Rio de Janeiro - RJ, 22271-022",
-      "description": "yay bacalhau!",
-      "website": "",
-      "price": "bitmore",
-      "type": "Portugêsh",
-      "id": 42633
-    },
-    {
-      "name": "Tragga - Parilla Argentina",
-      "location": "R. Cap. Salomão, 74 - Humaitá, Rio de Janeiro - RJ, 22271-040",
+      "name": "O Plebeu",
+      "location": "R. Cap. Salomão, 50 - Humaitá, Rio de Janeiro - RJ, 22271-040",
       "description": "",
-      "website": "tragga.com.br",
-      "price": "bit more",
-      "type": "Argentina",
-      "id": 17203
+      "website": "",
+      "price": "ok",
+      "type": "Botecow",
+      "id": 615
     },
     {
-      "name": "Restaurante Caravela do Visconde",
-      "location": "R. Visc. de Caravelas, 136 - Botafogo, Rio de Janeiro - RJ, 22271-022",
-      "description": "Old style is good style",
-      "website": "https://www.google.com.br/url?sa=t&rct=j&url=https%3A%2F%2Fwww.facebook.com%2Fcaraveladovisconde%2F%3Fref%3Daymt_homepage_panel&source=maps&cd=1&usg=AFQjCNGEG-bSpQuPvOKoT1pS35Oz3zZEZQ&sig2=OaMcga2M5XYI54wttRXA4A&ved=1t%3A3443%2Cp%3AH8WtWOvxCYSlwgT676LwBw",
+      "name": "Emporio",
+      "location": "R. Maria Quitéria, 37 - Ipanema, Rio de Janeiro - RJ, 22410-040",
+      "description": "Rock'n'roll",
+      "website": "https://www.google.com.br/url?sa=t&rct=j&url=https%3A%2F%2Fwww.facebook.com%2FEmp%25C3%25B3rio-37-547777705308757%2Ftimeline%2F&source=maps&cd=1&usg=AFQjCNFIO9LJQA7ufQSqeZAf1IkCL_53dQ&sig2=XySyaefg2QekYLha7a1Txw&ved=1t%3A3443%2Cp%3AP-muWIGaHJP9wATk0ovoAg",
       "price": "ok",
-      "type": "Classic brazuca",
-      "id": 17559
+      "type": "Bar",
+      "id": 1031
+    },
+    {
+      "name": "Devassa",
+      "location": "R. Bolívar, 8 - Copacabana, Rio de Janeiro - RJ, 22061-020",
+      "description": "",
+      "website": "",
+      "price": "bit more",
+      "type": "",
+      "id": 87490
     }
   ]
 }

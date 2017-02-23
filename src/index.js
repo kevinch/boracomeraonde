@@ -8,6 +8,7 @@ import Add from './modules/add.module'
 import './assets/styles/vendor/normalize.min.css'
 import './assets/styles/modules/landing.css'
 import './assets/styles/components/global/header.css'
+import './assets/styles/components/places/random.css'
 
 ReactDOM.render((
   <Router history={hashHistory}>
