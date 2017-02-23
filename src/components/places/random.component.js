@@ -16,7 +16,13 @@ class RandomPlace extends Component {
   // Get a random place form the list
   getRandomPlace () {
     let randomNum = Math.floor(Math.random() * this.state.places.length)
-    this.setState({random: this.state.places[randomNum]})
+
+    // Condition to not reload to the same place
+    if (this.state.random.id === this.state.places[randomNum].id) {
+      this.getRandomPlace()
+    } else {
+      this.setState({random: this.state.places[randomNum]})
+    }
   }
 
   // Load data when component is ready
