@@ -1,2 +1,17 @@
-.header-component {
-  background-color: blue; }
+.header {
+  position: relative;
+  z-index: 1; }
+
+.header:before {
+  content: '';
+  width: 120vw;
+  height: 100vh;
+  background-color: #fa1862;
+  position: absolute;
+  z-index: -1;
+  transform: skew(-65deg);
+  top: 0;
+  left: -100%; }
+
+.header-title {
+  margin: 0; }

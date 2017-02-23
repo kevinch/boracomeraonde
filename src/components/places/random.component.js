@@ -20,7 +20,88 @@ class RandomPlace extends Component {
 
   state = {
     places: [],
-    random: {}
+    random: {},
+    styles: [
+      {
+        "featureType": "landscape.man_made",
+        "stylers": [
+          { "color": "#1bc300" }
+        ]
+      },{
+        "featureType": "landscape.natural",
+        "stylers": [
+          { "color": "#1bc300" }
+        ]
+      },{
+        "featureType": "water",
+        "stylers": [
+          { "color": "#1bc300" },
+          { "lightness": -39 }
+        ]
+      },{
+        "featureType": "road.highway",
+        "elementType": "geometry",
+        "stylers": [
+          { "color": "#1bc300" },
+          { "lightness": 65 }
+        ]
+      },{
+        "featureType": "road.arterial",
+        "elementType": "geometry.fill",
+        "stylers": [
+          { "color": "#1bc300" },
+          { "lightness": 43 }
+        ]
+      },{
+        "featureType": "poi",
+        "elementType": "geometry",
+        "stylers": [
+          { "color": "#1bc300" }
+        ]
+      },{
+        "featureType": "administrative",
+        "elementType": "labels",
+        "stylers": [
+          { "visibility": "simplified" },
+          { "color": "#1bc300" },
+          { "lightness": -70 }
+        ]
+      },{
+        "featureType": "road",
+        "elementType": "labels",
+        "stylers": [
+          { "visibility": "simplified" },
+          { "color": "#1bc300" },
+          { "lightness": -74 }
+        ]
+      },{
+        "featureType": "poi",
+        "elementType": "labels",
+        "stylers": [
+          { "visibility": "off" }
+        ]
+      },{
+        "elementType": "labels",
+        "stylers": [
+          { "visibility": "simplified" }
+        ]
+      },{
+        "featureType": "poi",
+        "elementType": "labels.icon",
+        "stylers": [
+          { "hue": "#00ff00" },
+          { "gamma": 0.34 }
+        ]
+      },{
+        "featureType": "transit",
+        "elementType": "labels.text",
+        "stylers": [
+          { "color": "#1bc300" },
+          { "lightness": -37 }
+        ]
+      },{
+      }
+    ]
   }
 
   // Get a random place form the list
@@ -66,6 +147,8 @@ class RandomPlace extends Component {
 
       if (status === window.google.maps.GeocoderStatus.OK) {
         this.map.setCenter(results[0].geometry.location);
+        this.map.setOptions({styles: this.state.styles, disableDefaultUI: true})
+        this.map.panBy(-300, -250)
         this.marker.setPosition(results[0].geometry.location);
         return;
       }
@@ -90,31 +173,35 @@ class RandomPlace extends Component {
     let descriptionData, websiteData, typeData
 
     if (this.state.random.description) {
-      descriptionData = <p className="place-description">Description: {this.state.random.description}</p>
+      descriptionData = <p className="random-description">"{this.state.random.description}"</p>
     }
 
     if (this.state.random.website) {
       let url = this.state.random.website
       url = (!url.includes('http://')) ? 'http://' + url : ''
-      websiteData = <p className="place-website">Website: <a target="_blank" href={url} >{this.state.random.website}</a></p>
+      websiteData = <p className="random-website"><a target="_blank" href={url} >yey, eles tem um site ↗</a></p>
     }
 
     if (this.state.random.type) {
-      typeData = <p className="place-type">Type: {this.state.random.type}</p>
+      typeData = <p className="random-type">Type: {this.state.random.type}</p>
     }
 
     return (
       <div className="random-component">
-        <h2>{this.state.random.name}</h2>
-        {descriptionData}
-        {websiteData}
-        {typeData}
-        <p>Price: {this.state.random.price}</p>
-        <p>Location: {this.state.random.location}</p>
+        <div className="random-content">
+          <h2 className="random-title">{this.state.random.name}</h2>
+          {descriptionData}
+          {websiteData}
+          {typeData}
+          <p className="random-price">Price: {this.state.random.price}</p>
+          <p className="random-location">Location: {this.state.random.location}</p>
 
-        <a href="#" onClick={this.reload}>reload</a>
+          <a className="random-reload" href="#" onClick={this.reload}>reload</a>
+        </div>
 
-        <div className="map" ref={this.setMapElementReference}></div>
+        <div className="random-map-outter-container">
+          <div className="map" ref={this.setMapElementReference}></div>
+        </div>
       </div>
     )
   }
