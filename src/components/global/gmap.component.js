@@ -22,6 +22,9 @@ class Gmap extends Component {
   componentDidMount () {
     console.log('gmap componentDidMount')
     this.setState({address: this.props.address})
+    // this.setState((prevState, props) => {
+    //   return {address: props.address};
+    // });
     this.loadMap()
   }
 
@@ -40,7 +43,7 @@ class Gmap extends Component {
   }
 
   loadMap () {
-    this.geocodeAddress(this.props.address)
+    this.geocodeAddress(this.state.address)
 
     this.map = new window.google.maps.Map(this.mapElement, {
       zoom: INITIAL_MAP_ZOOM_LEVEL,

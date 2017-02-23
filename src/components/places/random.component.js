@@ -22,24 +22,9 @@ class RandomPlace extends Component {
     if (this.state.random.id === this.state.places[randomNum].id) {
       this.getRandomPlace()
     } else {
-      // let address
       this.setState({random: this.state.places[randomNum]})
-
-      //reload Gmap with: this.state.places[randomNum].location
     }
   }
-
-  // geocodeAddress (address) {
-  //   this.geocoder = new window.google.maps.Geocoder()
-  //   this.geocoder.geocode({ 'address': address }, function handleResults(results, status) {
-
-  //     if (status === window.google.maps.GeocoderStatus.OK) {
-  //       this.map.setCenter(results[0].geometry.location);
-  //       this.marker.setPosition(results[0].geometry.location);
-  //       return;
-  //     }
-  //   }.bind(this));
-  // }
 
   // Load data when component is ready
   componentDidMount () {
