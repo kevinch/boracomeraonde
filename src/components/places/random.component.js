@@ -1,10 +1,6 @@
 import React, { Component } from 'react'
 import { loadPlaces } from '../../lib/places.service'
 import { Place } from './place.component'
-// import { Website } from '../random/website.component'
-// import { Description } from '../random/description.component'
-// import { Type } from '../random/type.component'
-// import { Price } from '../random/price.component'
 
 const INITIAL_LOCATION = {
   address: 'Rio de Janeiro, Brasil',
@@ -176,26 +172,9 @@ class RandomPlace extends Component {
   }
 
   render() {
-    // let descriptionData, websiteData, typeData
-
-    // if (this.state.random.description) {
-    //   descriptionData = <Description description={this.state.random.description} />
-    // }
-
-    // if (this.state.random.website) {
-    //   let url = this.state.random.website
-    //   url = (!url.includes('http://')) ? 'http://' + url : ''
-    //   websiteData = <Website url={url} />
-    // }
-
-    // if (this.state.random.type) {
-    //   typeData = <Type type={this.state.random.type} />
-    // }
-
     return (
       <div className="random-component">
         <div className="random-content">
-          {/**/}
           <Place
             name={this.state.random.name}
             id={this.state.random.id}
@@ -205,18 +184,6 @@ class RandomPlace extends Component {
             price={this.state.random.price}
             location={this.state.random.location}
             />
-          {/**/}
-          {/*}
-          <h2 className="random-title">
-            {this.state.random.name}
-          </h2>
-          {descriptionData}
-          <p className="random-type-and-price text-center">
-            {typeData}
-            <Price price={this.state.random.price} />
-          </p>
-          {websiteData}
-          */}
         </div>
 
         <a

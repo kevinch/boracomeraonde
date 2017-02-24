@@ -80,10 +80,12 @@ class Add extends Component {
             handleFormChange={this.handleFormChange}
             handleSubmit={submitHandler}
             currentPlace={this.state.currentPlace} />
-          <p className="user-messages text-center">
-            {this.state.errorMessage && <span className="error">{this.state.errorMessage}</span>}
-            {this.state.message && <span className="success">{this.state.message}</span>}
-          </p>
+          <div className="add-form-response">
+            <p className="user-messages text-center">
+              {this.state.errorMessage && <span className="error">{this.state.errorMessage}</span>}
+              {this.state.message && <span className="success">{this.state.message}</span>}
+            </p>
+          </div>
         </div>
       </div>
     )

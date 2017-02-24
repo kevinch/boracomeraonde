@@ -79,7 +79,7 @@ export const AddForm = (props) => (
     <div className="form-group">
       <input
         value={props.currentPlace.type}
-        placeholder="tipo"
+        placeholder="tipo de comida"
         id="add-place-type"
         name="type"
         type="text"
