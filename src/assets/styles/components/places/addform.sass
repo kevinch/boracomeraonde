@@ -1,0 +1,54 @@
+.add-form
+  width: 70%
+  margin: 50px 0 0 15%
+  padding-bottom: 100px
+
+  .form-group
+    margin-bottom: 30px
+
+    input[type="text"]
+      width: 100%
+      padding: 20px 30px
+      border: 0
+      font-size: 24px
+      color: white
+      outline: none
+      background: #1bc300
+      box-shadow: 5px 5px 0 0 #127f00, 10px 10px 0 0 #105b00
+      font-family: Courier New, Consolas, Monaco, Lucida Console, monospace
+      transition: all .3s
+
+      &::-webkit-input-placeholder
+        color: white
+        font-style: italic
+
+      &:focus
+        box-shadow: 5px 5px 0 0 #105b00
+
+    radiogroup
+      display: flex
+      justify-content: center
+      padding: 20px 0px
+      background: #1bc300
+      box-shadow: 5px 5px 0 0 #127f00, 10px 10px 0 0 #105b00
+
+      label
+        margin: 5px 20px 0
+        position: relative
+        top: 10px
+        font-size: 24px
+        font-family: Courier New, Consolas, Monaco, Lucida Console, monospace
+        color: white
+
+      input
+        position: absolute
+        left: 50%
+        top: -20px
+        transform: translateX(-50%)
+
+  .form-submit-container
+    display: flex
+    justify-content: center
+
+    .submit-btn
+      position: relative

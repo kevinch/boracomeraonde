@@ -8,7 +8,7 @@ export const Description = (props) => (
       <span className="quote-mark">”</span>
     </p>
   </div>
-  )
+)
 
 Description.propTypes  ={
   description: React.PropTypes.string.isRequired

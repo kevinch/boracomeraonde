@@ -68,10 +68,6 @@
     position: fixed
     bottom: 40px
     left: 20px
-    font-size: 18px
-    font-family: "permanent_markerregular"
-    text-transform: uppercase
-    color: white
     z-index: 3
 
   &-map-outter-container
@@ -86,46 +82,3 @@
     .map
       height: 100vh
       width: 100vw
-
-$push-color: hsla(10, 90%, 40%, 1)
-$push-size: 120px
-
-[class*="push"]
-  display: inline-block
-  width: $push-size
-  height: $push-size
-  border: 0
-  margin: 1em
-  outline: none
-  background-color: $push-color
-  border-radius: 50%
-  cursor: pointer
-  transition: box-shadow 100ms
-  line-height: $push-size
-  text-align: center
-  text-decoration: none
-
-.push--flat
-  box-shadow: inset 0 $push-size/32 0 lighten($push-color, 5%), inset 0 (-$push-size/32) 0 darken($push-color, 5%), inset 0 0 0 $push-size/32 darken($push-color, 3%), inset 0 0 0 $push-size/12 $push-color, inset 0 0 0 $push-size/10 darken($push-color, 20%), inset 0 0 0 $push-size/9.2 darken($push-color, 50%), inset 0 0 0 $push-size/7.5 transparentize(lighten($push-color, 30%), .3), inset 0 0 0 $push-size/5.5 $push-color, inset 0 $push-size/2.5 $push-size/7.5 darken($push-color, 5%), inset 0 0 $push-size/10 $push-size/6 darken($push-color, 10%), 0 $push-size/20 0 rgba(0, 0, 0, .3)
-
-  &:after
-    content: ''
-    position: absolute
-    bottom: $push-size/20
-    left: $push-size/10
-    display: block
-    width: $push-size/1.25
-    height: $push-size/1.25
-    border: $push-size/15 solid rgba(0, 0, 0, .3)
-    border-width: 0 0 $push-size/15
-    border-radius: 50%
-    transition-duration: 100ms
-
-  &:active,
-  &.is-pushed
-    box-shadow: inset 0 $push-size/32 0 lighten($push-color, 5%), inset 0 (-$push-size/32) 0 darken($push-color, 5%), inset 0 0 0 $push-size/32 darken($push-color, 3%), inset 0 0 0 $push-size/12 $push-color, inset 0 0 0 $push-size/10 darken($push-color, 20%), inset 0 0 0 $push-size/8.5 darken($push-color, 40%), inset 0 0 0 $push-size/7.5 transparentize(lighten($push-color, 30%), .8), inset 0 0 0 $push-size/5.5 darken($push-color, 3%), inset 0 $push-size/2.5 $push-size/7.5 darken($push-color, 8%), inset 0 0 $push-size/10 $push-size/6 darken($push-color, 15%), 0 $push-size/20 0 rgba(0, 0, 0, .3)
-    background-color: darken($push-color, 2%)
-
-    &:after
-      bottom: $push-size/20 + $push-size/15
-      border-width: 0

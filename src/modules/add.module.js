@@ -58,7 +58,7 @@ class Add extends Component {
   handleEmptySubmit = (e) => {
     e.preventDefault()
     this.setState({
-      errorMessage: 'Name & location are mandatory.'
+      errorMessage: 'Tem que ter um nome'
     })
   }
 
@@ -70,24 +70,20 @@ class Add extends Component {
   }
 
   render() {
-    // TODO: add ocation as mandatory
-    const submitHandler = (this.state.currentPlace.name) ? this.handleSubmit : this.handleEmptySubmit
+    const submitHandler = this.state.currentPlace.name ? this.handleSubmit : this.handleEmptySubmit
 
     return (
       <div className="add-module">
         <Header />
-
-        <h1 className="page-title">Add new spot:</h1>
-
-        <div className="add-place">
-
-          {this.state.errorMessage && <span className="error">{this.state.errorMessage}</span>}
-          {this.state.message && <span className="success">{this.state.message}</span>}
-
-          <AddForm
-            handleFormChange={this.handleFormChange}
-            handleSubmit={submitHandler}
-            currentPlace={this.state.currentPlace} />
+        <div className="add-content">
+          <div className="add-place">
+            {this.state.errorMessage && <span className="error">{this.state.errorMessage}</span>}
+            {this.state.message && <span className="success">{this.state.message}</span>}
+            <AddForm
+              handleFormChange={this.handleFormChange}
+              handleSubmit={submitHandler}
+              currentPlace={this.state.currentPlace} />
+          </div>
         </div>
       </div>
     )

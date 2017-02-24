@@ -41,14 +41,11 @@ class Places extends Component {
     return (
       <div className="places-module">
         <Header />
-
-        <h1 className="page-title">All places:</h1>
-
-        {this.state.message && <span className="success">{this.state.message}</span>}
-
-        <PlacesList
-          places={this.state.places}
-          handleRemove={this.handleRemove} />
+        <div className="places-content">
+          <PlacesList
+            places={this.state.places}
+            handleRemove={this.handleRemove} />
+        </div>
       </div>
     )
   }
