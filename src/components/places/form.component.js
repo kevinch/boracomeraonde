@@ -46,40 +46,40 @@ export const AddForm = (props) => (
         <label>
           <input
             type="radio"
-            value="cheap"
+            value="barrato"
             name="price"
             onChange={props.handleFormChange}
-            checked={props.currentPlace.price === 'cheap'}
+            checked={props.currentPlace.price === 'barrato'}
           />
           Cheap
         </label>
         <label>
           <input
             type="radio"
-            value="ok"
+            value="legal"
             name="price"
             onChange={props.handleFormChange}
-            checked={props.currentPlace.price === 'ok'}
+            checked={props.currentPlace.price === 'legal'}
           />
           Ok
         </label>
         <label>
           <input
             type="radio"
-            value="bit more"
+            value="legal++"
             name="price"
             onChange={props.handleFormChange}
-            checked={props.currentPlace.price === 'bit more'}
+            checked={props.currentPlace.price === 'legal++'}
           />
           Bit more
         </label>
         <label>
           <input
             type="radio"
-            value="way more"
+            value="deve ter um erro…"
             name="price"
             onChange={props.handleFormChange}
-            checked={props.currentPlace.price === 'way more'}
+            checked={props.currentPlace.price === 'deve ter um erro…'}
           />
           Way more
         </label>

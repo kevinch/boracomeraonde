@@ -1,2 +1,8 @@
+.logo-svg {
+  width: 300px; }
+
+.logo-svg svg {
+  max-width: 100%; }
+
 .logo-svg * {
   fill: white; }

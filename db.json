@@ -4,9 +4,9 @@
       "name": "O Plebeu",
       "location": "R. Cap. Salomão, 50 - Humaitá, Rio de Janeiro - RJ, 22271-040",
       "description": "",
-      "website": "",
-      "price": "ok",
-      "type": "Botecow",
+      "website": "http://site.com",
+      "price": "barrato",
+      "type": "botecow",
       "id": 615
     },
     {
@@ -14,18 +14,27 @@
       "location": "R. Maria Quitéria, 37 - Ipanema, Rio de Janeiro - RJ, 22410-040",
       "description": "Rock'n'roll",
       "website": "https://www.google.com.br/url?sa=t&rct=j&url=https%3A%2F%2Fwww.facebook.com%2FEmp%25C3%25B3rio-37-547777705308757%2Ftimeline%2F&source=maps&cd=1&usg=AFQjCNFIO9LJQA7ufQSqeZAf1IkCL_53dQ&sig2=XySyaefg2QekYLha7a1Txw&ved=1t%3A3443%2Cp%3AP-muWIGaHJP9wATk0ovoAg",
-      "price": "ok",
-      "type": "Bar",
+      "price": "legal",
+      "type": "saidera ás 5am?",
       "id": 1031
     },
     {
       "name": "Devassa",
       "location": "R. Bolívar, 8 - Copacabana, Rio de Janeiro - RJ, 22061-020",
-      "description": "",
-      "website": "",
-      "price": "bit more",
-      "type": "",
+      "description": "bem legal mas o banheiro fede",
+      "website": "http://site.com",
+      "price": "legal++",
+      "type": "botecow",
       "id": 87490
+    },
+    {
+      "name": "Gula Gula Restaurante",
+      "location": "Av. Gen. San Martin, 1196 - Leblon, Rio de Janeiro - RJ, 22441-014",
+      "description": "Comida casual com boas opções vegetarianas ou não. Ótimo lugar para o dia a dia e jantar descontraído.",
+      "website": "gulagula.com.br",
+      "price": "deve ter um erro…",
+      "type": "restaurante",
+      "id": 87493
     }
   ]
 }

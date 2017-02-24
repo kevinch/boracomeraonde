@@ -1,5 +1,9 @@
 import React, { Component } from 'react'
 import { loadPlaces } from '../../lib/places.service'
+import { Website } from '../random/website.component'
+import { Description } from '../random/description.component'
+import { Type } from '../random/type.component'
+import { Price } from '../random/price.component'
 
 const INITIAL_LOCATION = {
   address: 'Rio de Janeiro, Brasil',
@@ -137,10 +141,12 @@ class RandomPlace extends Component {
     }
   }
 
+  // Get map reference in html
   setMapElementReference (mapElementReference) {
     this.mapElement = mapElementReference
   }
 
+  // Map setup
   geocodeAddress (address) {
     this.geocoder = new window.google.maps.Geocoder()
     this.geocoder.geocode({ 'address': address }, function handleResults(results, status) {
@@ -173,31 +179,37 @@ class RandomPlace extends Component {
     let descriptionData, websiteData, typeData
 
     if (this.state.random.description) {
-      descriptionData = <p className="random-description">"{this.state.random.description}"</p>
+      descriptionData = <Description description={this.state.random.description} />
     }
 
     if (this.state.random.website) {
       let url = this.state.random.website
       url = (!url.includes('http://')) ? 'http://' + url : ''
-      websiteData = <p className="random-website"><a target="_blank" href={url} >yey, eles tem um site ↗</a></p>
+      websiteData = <Website url={url} />
     }
 
     if (this.state.random.type) {
-      typeData = <p className="random-type">Type: {this.state.random.type}</p>
+      typeData = <Type type={this.state.random.type} />
     }
 
     return (
       <div className="random-component">
         <div className="random-content">
-          <h2 className="random-title">{this.state.random.name}</h2>
+          <h2 className="random-title">
+            {this.state.random.name}
+          </h2>
           {descriptionData}
+          <p className="random-type-and-price text-center">
+            {typeData}
+            <Price price={this.state.random.price} />
+          </p>
           {websiteData}
-          {typeData}
-          <p className="random-price">Price: {this.state.random.price}</p>
-          <p className="random-location">Location: {this.state.random.location}</p>
-
-          <a className="random-reload" href="#" onClick={this.reload}>reload</a>
         </div>
+
+        <a
+          className="random-reload push--flat"
+          href="#"
+          onClick={this.reload}>outro!</a>
 
         <div className="random-map-outter-container">
           <div className="map" ref={this.setMapElementReference}></div>
