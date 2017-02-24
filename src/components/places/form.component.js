@@ -7,7 +7,7 @@ export const AddForm = (props) => (
     <div className="form-group">
       <input
         value={props.currentPlace.name}
-        placeholder="nome"
+        placeholder="nome (obrigatório)"
         id="add-place-name"
         name="name"
         type="text"
@@ -16,7 +16,7 @@ export const AddForm = (props) => (
     <div className="form-group">
       <input
         value={props.currentPlace.location}
-        placeholder="endereço"
+        placeholder="endereço (obrigatório também)"
         id="add-place-location"
         name="location"
         type="text"

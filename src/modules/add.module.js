@@ -51,14 +51,14 @@ class Add extends Component {
     })
 
     createPlace(newPlace)
-      .then(() => this.showTempMEssage('place added'))
+      .then(() => this.showTempMEssage('show, ta dentro !)'))
   }
 
   // Handles missing arguments form submit
-  handleEmptySubmit = (e) => {
+  handleMissingItemsSubmit = (e) => {
     e.preventDefault()
     this.setState({
-      errorMessage: 'Tem que ter um nome'
+      errorMessage: 'nome e endereço ae! vlw.'
     })
   }
 
@@ -70,20 +70,20 @@ class Add extends Component {
   }
 
   render() {
-    const submitHandler = this.state.currentPlace.name ? this.handleSubmit : this.handleEmptySubmit
+    const submitHandler = this.state.currentPlace.name && this.state.currentPlace.location ? this.handleSubmit : this.handleMissingItemsSubmit
 
     return (
       <div className="add-module">
         <Header />
         <div className="add-content">
-          <div className="add-place">
+          <AddForm
+            handleFormChange={this.handleFormChange}
+            handleSubmit={submitHandler}
+            currentPlace={this.state.currentPlace} />
+          <p className="user-messages text-center">
             {this.state.errorMessage && <span className="error">{this.state.errorMessage}</span>}
             {this.state.message && <span className="success">{this.state.message}</span>}
-            <AddForm
-              handleFormChange={this.handleFormChange}
-              handleSubmit={submitHandler}
-              currentPlace={this.state.currentPlace} />
-          </div>
+          </p>
         </div>
       </div>
     )
