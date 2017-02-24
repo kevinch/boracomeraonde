@@ -15,7 +15,6 @@
   "scripts": {
     "build-css": "node-sass src/ -o src/",
     "watch-css": "npm run build-css && node-sass src/ -o src/ --watch --recursive",
-    "old-start": "concurrently --kill-others \"react-scripts start\" \"json-server -p 8080 --watch db.json\"",
     "start-backend": "json-server -p 8080 --watch db.json",
     "start-js": "react-scripts start",
     "start": "npm-run-all -p watch-css start-js start-backend",

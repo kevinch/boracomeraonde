@@ -25,11 +25,9 @@
   bottom: 130px;
   font-size: 30px;
   font-family: "permanent_markerregular"; }
-
-.add-module .user-messages .error {
-  color: #fa1862;
-  text-shadow: 2px 2px 0 #30000f; }
-
-.add-module .user-messages .success {
-  color: #1bc300;
-  text-shadow: 2px 2px 0 #052300; }
+  .add-module .user-messages .error {
+    color: #fa1862;
+    text-shadow: 2px 2px 0 #30000f; }
+  .add-module .user-messages .success {
+    color: #1bc300;
+    text-shadow: 2px 2px 0 #052300; }

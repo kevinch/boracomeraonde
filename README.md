@@ -18,8 +18,9 @@ See the section about [running tests](#running-tests) for more information.
 
 ### `npm run build`
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+To check the result you will need to do the following after the build command:
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+* `yarn global add pushstate-server` (if not already installed)
+* `pushstate-server build`
+* `json-server -p 8080 --watch db.json` (to run the backend)
+* open [http://localhost:9000](http://localhost:9000)
