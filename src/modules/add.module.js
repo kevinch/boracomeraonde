@@ -18,7 +18,7 @@ class Add extends Component {
   }
 
   // Handles messages to user
-  showTempMEssage = (msg) => {
+  showTempMessage = (msg) => {
     this.setState({message: msg})
     setTimeout(() => this.setState({message: ''}), 2500)
   }
@@ -51,7 +51,7 @@ class Add extends Component {
     })
 
     createPlace(newPlace)
-      .then(() => this.showTempMEssage('show, ta dentro !)'))
+      .then(() => this.showTempMessage('show, ta dentro !)'))
   }
 
   // Handles missing arguments on form submit
