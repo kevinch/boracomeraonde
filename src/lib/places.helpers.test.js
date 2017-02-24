@@ -1,4 +1,4 @@
-import { addPlace, removePlace } from './placesHelpers'
+import { addPlace, removePlace } from './places.helpers'
 
 test('addPlace should add the passed place to the list', () => {
   const startList = [
