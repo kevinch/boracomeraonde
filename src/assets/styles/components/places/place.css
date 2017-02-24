@@ -1,0 +1,34 @@
+.place-title {
+  margin: 0 0 20px 0;
+  text-align: center;
+  line-height: 1em;
+  font-size: 120px;
+  font-family: "permanent_markerregular";
+  text-transform: uppercase;
+  text-shadow: -5px -5px 0px #510823;
+  color: #fa1862; }
+
+.place-website {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  -ms-word-break: break-all;
+  word-break: break-all;
+  word-break: break-word;
+  -ms-hyphens: auto;
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto; }
+
+.place-name {
+  margin: 0 0 20px 0;
+  text-align: center;
+  line-height: normal;
+  font-size: 40px;
+  font-family: "permanent_markerregular";
+  text-transform: uppercase;
+  text-shadow: -2px -2px 0px #510823;
+  color: #fa1862; }
+
+.place-remove .link {
+  font-size: 14px;
+  color: red; }

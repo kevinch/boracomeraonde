@@ -1,19 +1,23 @@
 .nav {
   margin: 0;
   padding: 0; }
-  .nav-item {
-    list-style: none;
-    font-family: "permanent_markerregular"; }
-  .nav-link {
-    font-size: 24px;
-    color: #ff0;
-    text-decoration: none;
-    transition: color .2s ease; }
-    .nav-link:hover {
-      color: white; }
-  .nav-hand {
-    margin-right: 10px;
-    color: #ffc107;
-    font-size: 32px;
-    position: relative;
-    top: 6px; }
+
+.nav-item {
+  list-style: none;
+  font-family: "permanent_markerregular"; }
+
+.nav-link {
+  font-size: 24px;
+  color: #ff0;
+  text-decoration: none;
+  transition: color .2s ease; }
+
+.nav-link:hover {
+  color: white; }
+
+.nav-hand {
+  margin-right: 10px;
+  color: #ffc107;
+  font-size: 32px;
+  position: relative;
+  top: 6px; }

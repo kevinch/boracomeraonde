@@ -1,9 +1,10 @@
 import React, { Component } from 'react'
 import { loadPlaces } from '../../lib/places.service'
-import { Website } from '../random/website.component'
-import { Description } from '../random/description.component'
-import { Type } from '../random/type.component'
-import { Price } from '../random/price.component'
+import { Place } from './place.component'
+// import { Website } from '../random/website.component'
+// import { Description } from '../random/description.component'
+// import { Type } from '../random/type.component'
+// import { Price } from '../random/price.component'
 
 const INITIAL_LOCATION = {
   address: 'Rio de Janeiro, Brasil',
@@ -120,7 +121,6 @@ class RandomPlace extends Component {
       this.setState({random: this.state.places[randomNum]})
 
       // Gmap related
-      // Bug: here this.state.random was still the old one, dont know why
       address = this.state.places[randomNum].location
       this.geocodeAddress(address)
 
@@ -176,25 +176,37 @@ class RandomPlace extends Component {
   }
 
   render() {
-    let descriptionData, websiteData, typeData
+    // let descriptionData, websiteData, typeData
 
-    if (this.state.random.description) {
-      descriptionData = <Description description={this.state.random.description} />
-    }
+    // if (this.state.random.description) {
+    //   descriptionData = <Description description={this.state.random.description} />
+    // }
 
-    if (this.state.random.website) {
-      let url = this.state.random.website
-      url = (!url.includes('http://')) ? 'http://' + url : ''
-      websiteData = <Website url={url} />
-    }
+    // if (this.state.random.website) {
+    //   let url = this.state.random.website
+    //   url = (!url.includes('http://')) ? 'http://' + url : ''
+    //   websiteData = <Website url={url} />
+    // }
 
-    if (this.state.random.type) {
-      typeData = <Type type={this.state.random.type} />
-    }
+    // if (this.state.random.type) {
+    //   typeData = <Type type={this.state.random.type} />
+    // }
 
     return (
       <div className="random-component">
         <div className="random-content">
+          {/**/}
+          <Place
+            name={this.state.random.name}
+            id={this.state.random.id}
+            description={this.state.random.description}
+            type={this.state.random.type}
+            website={this.state.random.website}
+            price={this.state.random.price}
+            location={this.state.random.location}
+            />
+          {/**/}
+          {/*}
           <h2 className="random-title">
             {this.state.random.name}
           </h2>
@@ -204,6 +216,7 @@ class RandomPlace extends Component {
             <Price price={this.state.random.price} />
           </p>
           {websiteData}
+          */}
         </div>
 
         <a

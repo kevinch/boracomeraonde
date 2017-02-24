@@ -1,45 +1,61 @@
 import React from 'react'
+import { Price } from '../place/price.component'
+import { Type } from '../place/type.component'
+import { Website } from '../place/website.component'
+import { Description } from '../place/description.component'
 
 const partial = (fn, ...args) => fn.bind(null, ...args)
 
 export const Place = (props) => {
-  const handleRemove = partial(props.handleRemove, props.id)
-  let descriptionData, websiteData, priceClasses, typeData
+  let descriptionData, websiteData, typeData, deleteData, locationData
+
+  if (props.handleRemove) {
+    const handleRemove = partial(props.handleRemove, props.id)
+    deleteData = <p className="place-remove text-center"><a className="link" href="#" onClick={handleRemove}>deletar</a></p>
+  }
 
   if (props.description) {
-    descriptionData = <p className="place-description">Description: {props.description}</p>
+    descriptionData = <Description description={props.description} />
   }
 
   if (props.website) {
     let url = props.website
     url = (!url.includes('http://')) ? 'http://' + url : ''
-    websiteData = <p className="place-website">Website: <a target="_blank" href={url} >{props.website}</a></p>
+    websiteData = <Website url={url} />
   }
 
   if (props.type) {
-    typeData = <p className="place-type">Type: {props.type}</p>
+    typeData = <Type type={props.type} />
   }
 
-  priceClasses = 'place-price ' + props.price
+  if (props.showLocation) {
+    locationData = <p className="place-location text-center">{props.location}</p>
+  }
 
   return (
-    <li>
-      <p className="place-name">Name: {props.name}</p>
-      <p className="place-location">Location: {props.location}</p>
+    <div className="place-item">
+      <h2 className="place-title">
+        {props.name}
+      </h2>
       {descriptionData}
+      {locationData}
+      <p className="place-type-and-price text-center">
+        {typeData}
+        <Price price={props.price} />
+      </p>
       {websiteData}
-      {typeData}
-      <p className={priceClasses}>Price: {props.price}</p>
-      <p><a href="#" onClick={handleRemove}>Remove</a></p>
-    </li>
+
+      {deleteData}
+    </div>
   )
 }
 
 Place.propTypes = {
-  name: React.PropTypes.string.isRequired,
-  location: React.PropTypes.string.isRequired,
+  name: React.PropTypes.string,
   description: React.PropTypes.string,
+  location: React.PropTypes.string,
   website: React.PropTypes.string,
   type: React.PropTypes.string,
-  id: React.PropTypes.number.isRequired
+  id: React.PropTypes.number,
+  handleRemove: React.PropTypes.func
 }

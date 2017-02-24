@@ -17,6 +17,7 @@ import './assets/styles/components/global/arcadebutton.css'
 import './assets/styles/components/global/pagetitle.css'
 import './assets/styles/components/places/random.css'
 import './assets/styles/components/places/list.css'
+import './assets/styles/components/places/place.css'
 import './assets/styles/components/places/addform.css'
 
 ReactDOM.render((

@@ -11,21 +11,11 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 50vh;
-  height: 190vh;
+  width: 55vh;
+  height: 250vh;
   transform: translate(-50%, -50%) rotate(65deg);
   background-color: #fbaa00;
   z-index: -1; }
-
-.random-title {
-  margin: 0 0 20px 0;
-  text-align: center;
-  line-height: 1em;
-  font-size: 120px;
-  font-family: "permanent_markerregular";
-  text-transform: uppercase;
-  text-shadow: -5px -5px 0px #510823;
-  color: #fa1862; }
 
 .random-description {
   display: flex;

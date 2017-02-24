@@ -37,7 +37,6 @@ export const AddForm = (props) => (
         placeholder="site web"
         id="add-place-website"
         name="website"
-        placeholder="http://www."
         type="text"
         onChange={props.handleFormChange} />
     </div>
