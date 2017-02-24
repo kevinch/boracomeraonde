@@ -1,4 +1,26 @@
 .random
+  &-component
+    position: fixed
+    width: 100vw
+    top: 0
+    left: 0
+    overflow: hidden
+    height: 100vh
+    max-height: 100vh
+
+    &:before
+      content: ''
+      width: 120vw
+      height: 100vh
+      background-color: #e7004a
+      position: fixed
+      z-index: 1
+      -webkit-transform: skew(-65deg)
+      -ms-transform: skew(-65deg)
+      transform: skew(-65deg)
+      top: 0
+      left: -100%
+
   &-content
     position: absolute
     top: 50%

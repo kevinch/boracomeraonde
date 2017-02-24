@@ -4,7 +4,7 @@
       "name": "O Plebeu",
       "location": "R. Cap. Salomão, 50 - Humaitá, Rio de Janeiro - RJ, 22271-040",
       "description": "",
-      "website": "http://site.com",
+      "website": "",
       "price": "barrato",
       "type": "botecow",
       "id": 615
@@ -22,7 +22,7 @@
       "name": "Devassa",
       "location": "R. Bolívar, 8 - Copacabana, Rio de Janeiro - RJ, 22061-020",
       "description": "bem legal mas o banheiro fede",
-      "website": "http://site.com",
+      "website": "",
       "price": "legal++",
       "type": "botecow",
       "id": 87490
@@ -37,58 +37,40 @@
       "id": 87493
     },
     {
-      "name": "qjsfhkjhdf",
-      "location": "kjsdhfkjshdfkjh",
-      "description": "",
-      "website": "",
-      "price": "ok",
-      "type": "",
-      "id": 8355
+      "name": "Comuna",
+      "location": "R. Sorocaba, 585 - Botafogo, Rio de Janeiro - RJ, 22271-110",
+      "description": "BotaHipGo",
+      "website": "comuna.cc",
+      "price": "legal",
+      "type": "brazuka",
+      "id": 2746
     },
     {
-      "name": "qslkdjqs",
-      "location": "sdlfkjsd",
-      "description": "",
+      "name": "Calavera Kitchen & Bar",
+      "location": "R. Cap. Salomão, 14 - Humaitá, Rio de Janeiro - RJ, 22271-040",
+      "description": "burger muito foda e cerva artesanal",
       "website": "",
-      "price": "ok",
-      "type": "",
-      "id": 8366
+      "price": "legal++",
+      "type": "Burgeria",
+      "id": 38668
     },
     {
-      "name": "qslfn",
-      "location": "sdlg",
-      "description": "",
-      "website": "",
-      "price": "ok",
-      "type": "",
-      "id": 27094
+      "name": "Eccellenza",
+      "location": "R. Visc. de Caravelas, 121 - Humaitá, Rio de Janeiro - RJ, 22271-041",
+      "description": "pizza boa eh",
+      "website": "eccellenza.com.br",
+      "price": "legal++",
+      "type": "pizza & cie",
+      "id": 56074
     },
     {
-      "name": "qlskfq",
-      "location": "sdfk",
+      "name": "Balada Mix",
+      "location": "R. São Clemente, 95 - Botafogo, Rio de Janeiro - RJ, 22260-001",
       "description": "",
-      "website": "",
-      "price": "ok",
-      "type": "",
-      "id": 41167
-    },
-    {
-      "name": "qsfn",
-      "location": "sdfn",
-      "description": "",
-      "website": "",
-      "price": "ok",
-      "type": "",
-      "id": 36572
-    },
-    {
-      "name": "qsfb",
-      "location": "dfb",
-      "description": "",
-      "website": "",
-      "price": "ok",
-      "type": "",
-      "id": 95399
+      "website": "baladamixrestaurante.com.br",
+      "price": "legal",
+      "type": "brazuka",
+      "id": 34678
     }
   ]
 }

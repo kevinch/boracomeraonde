@@ -41,11 +41,9 @@ class Places extends Component {
     return (
       <div className="places-module">
         <Header />
-        <div className="places-content">
-          <PlacesList
-            places={this.state.places}
-            handleRemove={this.handleRemove} />
-        </div>
+        <PlacesList
+          places={this.state.places}
+          handleRemove={this.handleRemove} />
       </div>
     )
   }

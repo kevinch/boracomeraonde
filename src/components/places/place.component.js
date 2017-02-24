@@ -44,7 +44,6 @@ export const Place = (props) => {
         <Price price={props.price} />
       </p>
       {websiteData}
-
       {deleteData}
     </div>
   )
