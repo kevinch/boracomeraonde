@@ -12,13 +12,6 @@ const INITIAL_LOCATION = {
 const INITIAL_MAP_ZOOM_LEVEL = 15
 
 class RandomPlace extends Component {
-  constructor () {
-    super()
-
-    this.reload = this.reload.bind(this)
-    this.setMapElementReference = this.setMapElementReference.bind(this)
-  }
-
   state = {
     places: [],
     random: {},
@@ -138,7 +131,7 @@ class RandomPlace extends Component {
   }
 
   // Get map reference in html
-  setMapElementReference (mapElementReference) {
+  setMapElementReference = (mapElementReference) => {
     this.mapElement = mapElementReference
   }
 
@@ -166,7 +159,7 @@ class RandomPlace extends Component {
   }
 
   // Reload action
-  reload (e) {
+  reload = (e) => {
     e.preventDefault()
     this.getRandomPlace()
   }
